@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свадебное агентство</title>
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+              <a href="#home" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+              <i class="fas fa-heart" style="color: #D8A2B0; font-size: 28px;"></i>
+              <span style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: #D8A2B0;">Wedding</span>
+              </a>
+            </div>
+            <button class="burger" id="burger">☰</button>
+            <nav id="nav">
+                <a href="#home">Главная</a>
+                <a href="#about">О нас</a>
+                <a href="#services">Услуги</a>
+                <a href="#portfolio">Портфолио</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <h1>Wedding</h1>
+            <p class="subtitle">Свадебное агентство премиум-класса</p>
+            <p>Создаём незабываемые моменты вашей любви</p>
+            <a href="#contacts" class="btn">Запросить консультацию</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>О нашем агентстве</h2>
+            <p class="about-text">Wedding — команда профессионалов, которая превращает мечты о свадьбе в реальность.</p>
+            
+            <div class="stats">
+                <div><span class="num">2015</span><br>Год основания</div>
+                <div><span class="num">500+</span><br>Проектов</div>
+                <div><span class="num">450+</span><br>Счастливых пар</div>
+                <div><span class="num">9+</span><br>Лет опыта</div>
+            </div>
+            
+            <div class="advantages">
+                <div class="adv-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Индивидуальный подход</h3>
+                    <p>Каждая свадьба уникальна</p>
+                </div>
+                <div class="adv-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Проверенные подрядчики</h3>
+                    <p>Только лучшие специалисты</p>
+                </div>
+                <div class="adv-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Полное сопровождение</h3>
+                    <p>Мы всегда рядом</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <p class="section-sub">Полный спектр услуг для свадьбы вашей мечты</p>
+            <div class="services-grid" id="services-list"></div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2>Наше портфолио</h2>
+            <p class="section-sub">Каждая свадьба — уникальная история</p>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-cat="all">Все</button>
+                <button class="filter-btn" data-cat="palace">Дворцовые</button>
+                <button class="filter-btn" data-cat="outdoor">Выездные</button>
+                <button class="filter-btn" data-cat="lovestory">Love story</button>
+            </div>
+            
+            <div class="portfolio-grid" id="portfolio-list"></div>
+        </div>
+    </section>
+
+    <section id="reviews" class="section bg-light">
+        <div class="container">
+            <h2>Отзывы наших пар</h2>
+            <div class="reviews-grid" id="reviews-list"></div>
+        </div>
+    </section>
+
+    <section id="contacts" class="section">
+        <div class="container">
+            <div class="contacts-flex">
+                <div class="contacts-info">
+                    <h2>Свяжитесь с нами</h2>
+                    <p><i class="fas fa-map-marker-alt"></i> Ставрополь, пр. Кулакова, 2</p>
+                    <p><i class="fas fa-phone-alt"></i> +7 (900) 942-52-67</p>
+                    <p><i class="fas fa-envelope"></i> info@wedding.ru</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contacts-form">
+                    <form id="feedback-form">
+                        <input type="text" id="form-name" placeholder="Ваше имя" required>
+                        <input type="email" id="form-email" placeholder="Ваш Email" required>
+                        <textarea id="form-message" rows="4" placeholder="Ваше сообщение" required></textarea>
+                        <button type="submit" class="btn">Отправить</button>
+                        <div id="form-message-result"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Свадебное агентство. Все права защищены.</p>
+            <p><a href="#">Политика конфиденциальности</a></p>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-img" id="modal-img">
+    </div>
+
+    <button class="to-top" id="toTop">↑</button>
+
+    <script src="js/data.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/reviews.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
